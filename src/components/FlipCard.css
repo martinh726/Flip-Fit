@@ -1,6 +1,6 @@
 /*Background Color*/
 body {
-  background-color: rgba(37, 18, 134, 0.223);
+  background-color: burlywood;
 }
 /*Base for card flip*/
 .flip-card {
@@ -56,7 +56,7 @@ body {
 /*Text when hovering/Opacity*/
 #text {
   color: black;
-  font-size: 20px;
+  font-size: 17px;
   font-family: "Trebuchet MS";
   padding: 10px 30px;
   text-align: center;
@@ -92,4 +92,5 @@ img {
 
 #timer-button {
   padding: 10%;
+  background-color: rgb(212, 197, 178);
 }
