@@ -22,7 +22,12 @@ function FlipCard() {
             <figure>
               <img src="/imgs/pushup-1462808858.gif" alt="pushups-gif" />
             </figure>
-            <input type="button" value="Add Timer" id="timer-button" />
+            <input
+              type="button"
+              value="Add Timer"
+              id="timer-button"
+              onClick={(e) => e.stopPropagation()}
+            />
           </section>
         </div>
       </div>

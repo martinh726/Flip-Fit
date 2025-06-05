@@ -40,7 +40,7 @@ body {
 
 /*Changing the front element*/
 .front {
-  background-image: url("C:\Users\marti\OneDrive\Desktop\flipfit\public\imgs\card-back-red.png");
+  background-image: url("/imgs/card-back-red.png");
   background-size: cover;
   color: white;
 }
