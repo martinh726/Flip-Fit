@@ -40,7 +40,8 @@ body {
 
 /*Changing the front element*/
 .front {
-  background-image: url("/imgs/card-back-red.png");
+  /* Use a relative path so Webpack can resolve the image */
+  background-image: url("../../public/imgs/card-back-red.png");
   background-size: cover;
   color: white;
 }
