@@ -1,11 +1,18 @@
 import React, { useState } from "react";
 import "./FlipCard.css";
+import Timer from "./Timer";
 
-function FlipCard() {
+function FlipCard({ workout, onComplete }) {
   const [isFlipped, setIsFlipped] = useState(false);
+  const [showTimer, setShowTimer] = useState(false);
 
   const handleFlip = () => {
     setIsFlipped(!isFlipped);
+  };
+
+  const handleTimerFinish = () => {
+    setShowTimer(false);
+    onComplete && onComplete(workout.name);
   };
 
   return (
@@ -17,12 +24,25 @@ function FlipCard() {
         <div className="back">
           <section id="workout">
             <p>
-              Push-ups <br />4 X 20
+              {workout.name} <br />
+              {workout.reps}
             </p>
             <figure>
-              <img src="/imgs/pushup-1462808858.gif" alt="pushups-gif" />
+              <img src={workout.image} alt={`${workout.name} gif`} />
             </figure>
-            <input type="button" value="Add Timer" id="timer-button" />
+            {showTimer ? (
+              <Timer seconds={30} onFinish={handleTimerFinish} />
+            ) : (
+              <input
+                type="button"
+                value="Add Timer"
+                id="timer-button"
+                onClick={e => {
+                  e.stopPropagation();
+                  setShowTimer(true);
+                }}
+              />
+            )}
           </section>
         </div>
       </div>
