@@ -19,7 +19,7 @@ body {
   transition: transform 0.6s;
 }
 
-/*Roatating it 180 degrees*/
+/*Rotating it 180 degrees.*/
 .flipped {
   transform: rotateY(180deg);
 }
@@ -45,7 +45,7 @@ body {
   color: white;
 }
 
-/*Changing the back elment*/
+/*Changing the back element.*/
 .back {
   background-color: white;
   color: black;
